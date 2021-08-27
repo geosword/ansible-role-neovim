@@ -33,14 +33,10 @@
   synchronize:
     src: "files/{{ item }}"
     dest: "{{ userdir }}/.config/nvim/"
+    rsync_opts: "-zz"
   with_items:
-    - airline.vim
-    - ale.vim
     - deoplete.vim
-    - ftdetect
-    - init.vim
     - plugins.vim
-    - yamllint.conf
 # TODO create a python virtual environment if possible, and potentially, we need to install
 # powerline-status - CHECK IF THE CONTAINER HAS THIS
 #
